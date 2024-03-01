@@ -1,0 +1,587 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Facebook_System",
+    "dateExported": "2024-03-01T10:41:15.750Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "9d246694-94fb-4c48-b16a-a7841ae87ced",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-02-25T23:16:59.991Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f39974c7-8cfc-4f47-b5b4-3612c9410d44",
+            "name": "publications",
+            "containerId": "",
+            "created": "2024-02-29T04:09:48.590Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "97c6d6b6-0d8f-4d5c-88d0-ffec16800d59",
+            "name": "comments",
+            "containerId": "",
+            "created": "2024-02-29T16:31:17.763Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "61d823a9-5036-4072-bdbb-c5e587ee9d13",
+            "name": "categories",
+            "containerId": "",
+            "created": "2024-03-01T05:47:55.888Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "5d81140d-0922-4664-965e-ca972447c40c",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "",
+            "name": "createUser",
+            "url": "createUser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-25T23:17:11.961Z",
+            "modified": "2024-03-01T10:22:21.152Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Weslly"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Cabrera"
+                    },
+                    {
+                        "name": "email",
+                        "value": "wcabrera1"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Des1"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "03381570-689c-4a65-977b-cc26f759554d",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "9d246694-94fb-4c48-b16a-a7841ae87ced",
+            "name": "getUsers",
+            "url": "getUsers",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-28T16:21:33.736Z",
+            "modified": "2024-03-01T05:42:50.686Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "546a97d1-895a-4f21-a1ad-4b2650013eeb",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "",
+            "name": "login",
+            "url": "login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-28T16:24:51.026Z",
+            "modified": "2024-03-01T10:39:10.784Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "Des1"
+                    },
+                    {
+                        "name": "email",
+                        "value": "wcabrera",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "password",
+                        "value": "123"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6bef74a0-c361-4d9e-87bb-eaf5c887b62f",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "9d246694-94fb-4c48-b16a-a7841ae87ced",
+            "name": "updateUser",
+            "url": "updateUser/65e1ac5d9f81f2b263fa4020",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-28T16:41:32.033Z",
+            "modified": "2024-03-01T10:40:39.294Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Alex"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Mo"
+                    },
+                    {
+                        "name": "email",
+                        "value": "wcabre"
+                    },
+                    {
+                        "name": "username",
+                        "value": "De"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "020bced1-0f6a-433b-bd0f-7925a030294e",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "9d246694-94fb-4c48-b16a-a7841ae87ced",
+            "name": "searchUser",
+            "url": "searchUser/65dbcad289f9132031489b7a",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-02-29T03:09:10.904Z",
+            "modified": "2024-03-01T05:43:38.680Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "400c5861-070f-4001-bd99-b26aa7826320",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "9d246694-94fb-4c48-b16a-a7841ae87ced",
+            "name": "updatePassword",
+            "url": "updatePassword",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-29T03:29:51.812Z",
+            "modified": "2024-03-01T05:45:45.486Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "oldPassword",
+                        "value": "12345"
+                    },
+                    {
+                        "name": "newPassword",
+                        "value": "123"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "985727f9-6f7e-4b11-a414-fb5e6353a210",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "f39974c7-8cfc-4f47-b5b4-3612c9410d44",
+            "name": "createPublication",
+            "url": "createPublication",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-02-29T04:50:28.009Z",
+            "modified": "2024-03-01T10:21:51.208Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Champions"
+                    },
+                    {
+                        "name": "text",
+                        "value": "Ida de octavos de final"
+                    },
+                    {
+                        "name": "category",
+                        "value": "65e1ac019f81f2b263fa4018"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "457dd452-31d9-4a9e-bc40-5c050f47f11c",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "f39974c7-8cfc-4f47-b5b4-3612c9410d44",
+            "name": "getPublications",
+            "url": "getPublication",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-02-29T14:36:10.399Z",
+            "modified": "2024-03-01T05:46:08.974Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "762c5ccd-e7eb-4bb9-b62d-3ae982eb5f77",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "f39974c7-8cfc-4f47-b5b4-3612c9410d44",
+            "name": "searchPublication",
+            "url": "searchPublication/65e1ac3f9f81f2b263fa401b",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-02-29T14:50:35.658Z",
+            "modified": "2024-03-01T10:25:53.180Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8fd195ed-cae9-45ad-8575-3f35e230b9fe",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "f39974c7-8cfc-4f47-b5b4-3612c9410d44",
+            "name": "updatePublication",
+            "url": "updatePublication/65e1ac3f9f81f2b263fa401b",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-02-29T15:07:26.501Z",
+            "modified": "2024-03-01T10:26:33.938Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Partidos"
+                    },
+                    {
+                        "name": "text",
+                        "value": "Champions regresa"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "707963dd-eaa8-47b0-a8f4-f5d710ea7ccf",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "f39974c7-8cfc-4f47-b5b4-3612c9410d44",
+            "name": "deletePublication",
+            "url": "deletePublication/65e1ac3f9f81f2b263fa401b",
+            "method": "DELETE",
+            "sortNum": 110000,
+            "created": "2024-02-29T15:31:41.460Z",
+            "modified": "2024-03-01T10:35:53.198Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2116b3ac-76e4-4d17-a69d-9985c239e6c0",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "97c6d6b6-0d8f-4d5c-88d0-ffec16800d59",
+            "name": "createComment",
+            "url": "createComment",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-02-29T16:31:26.844Z",
+            "modified": "2024-03-01T10:39:52.206Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Que emocion"
+                    },
+                    {
+                        "name": "text",
+                        "value": "Ya se vienen los partidos buenos"
+                    },
+                    {
+                        "name": "publication",
+                        "value": "65e1b0459e09b4b34d0a8816"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1bda778c-51a3-419d-896b-086c5b6750e2",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "61d823a9-5036-4072-bdbb-c5e587ee9d13",
+            "name": "createCategory",
+            "url": "createCategory",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-03-01T05:48:20.627Z",
+            "modified": "2024-03-01T05:49:12.884Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "category",
+                        "value": "Deporte"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Todo relacionado a futbol"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "89196cb3-c5fc-40bd-acd2-60e80a0045bd",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "61d823a9-5036-4072-bdbb-c5e587ee9d13",
+            "name": "getCategories",
+            "url": "getCategories",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-03-01T05:50:06.156Z",
+            "modified": "2024-03-01T05:50:54.838Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "318093cd-1861-4257-bf44-bfd18ee4de5b",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "61d823a9-5036-4072-bdbb-c5e587ee9d13",
+            "name": "searchCategory",
+            "url": "searchCategory/65e16c58d0c4f3209f4689ac",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2024-03-01T05:51:16.902Z",
+            "modified": "2024-03-01T05:52:17.768Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "13f4c9df-e853-4dd0-88c8-35ba36fbcd9f",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "61d823a9-5036-4072-bdbb-c5e587ee9d13",
+            "name": "updateCategory",
+            "url": "updateCategory/65e16c6ca488196450b40b4c",
+            "method": "PUT",
+            "sortNum": 160000,
+            "created": "2024-03-01T05:55:52.356Z",
+            "modified": "2024-03-01T05:57:22.195Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "category",
+                        "value": "Cocina"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Comer"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "49df1d7b-e4e2-479f-afd3-9e5d5291c48b",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "f39974c7-8cfc-4f47-b5b4-3612c9410d44",
+            "name": "personalPublications",
+            "url": "personalPublications",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-03-01T06:39:06.447Z",
+            "modified": "2024-03-01T06:39:27.801Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a2ec8ef1-ce2e-4771-b706-6080ed7eaf51",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "97c6d6b6-0d8f-4d5c-88d0-ffec16800d59",
+            "name": "personalCommentaries",
+            "url": "personalCommentaries",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2024-03-01T06:45:54.805Z",
+            "modified": "2024-03-01T06:46:24.228Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d0f9f624-fad7-4ecb-ab83-dbead56d7a82",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "97c6d6b6-0d8f-4d5c-88d0-ffec16800d59",
+            "name": "updateComment",
+            "url": "updateComment/65e1acb19f81f2b263fa4024",
+            "method": "PUT",
+            "sortNum": 190000,
+            "created": "2024-03-01T07:10:54.461Z",
+            "modified": "2024-03-01T10:28:04.413Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Champions"
+                    },
+                    {
+                        "name": "text",
+                        "value": "Los partidos estarán peleados"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "23f9eef7-cfda-48f8-b034-3d00c0abf4f1",
+            "colId": "95b3d256-f86c-4310-9f1f-b28d3a7bc131",
+            "containerId": "97c6d6b6-0d8f-4d5c-88d0-ffec16800d59",
+            "name": "deleteComment",
+            "url": "deleteComment/65e1acb19f81f2b263fa4024",
+            "method": "DELETE",
+            "sortNum": 200000,
+            "created": "2024-03-01T07:19:08.449Z",
+            "modified": "2024-03-01T10:30:13.036Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:3300/"
+        },
+        "envId": "0a598600-1657-41aa-a02e-aa0e3a67b4af"
+    }
+}

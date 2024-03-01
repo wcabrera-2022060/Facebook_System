@@ -75,13 +75,19 @@ export const searchUser = async (req, res) => {
 export const updateUser = async (req, res) => {
     try {
         let { _id } = req.user
+        let {id} = req.params
         let data = req.body
-        let update = dataUser(data)
-        if (!update) return res.status(400).send({ message: 'Incorrect data has been entered or data is missing' })
-        let user = await User.findOneAndUpdate({ _id: _id }, data, { new: true })
-        if (!user) return res.status(404).send({ message: 'Your user not found, not updated' })
-        return res.send({ message: 'User updated successfully', user })
+        if(id.toString() === _id.toString()){
+            let update = dataUser(data)
+            if (!update) return res.status(400).send({ message: 'Incorrect data has been entered or data is missing' })
+            let user = await User.findOneAndUpdate({ _id: _id }, data, { new: true })
+            if (!user) return res.status(404).send({ message: 'Your user not found, not updated' })
+            return res.send({ message: 'User updated successfully', user })
+        }else{
+            return res.status(401).send({message: 'You cannot edit his profile'})
+        }
     } catch (error) {
+        console.error(error)
         return res.status(500).send({ message: 'Error updating user' })
     }
 }

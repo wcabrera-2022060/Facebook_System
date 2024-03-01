@@ -21,6 +21,10 @@ const publicationSchema = Schema({
         ref: 'category',
         required: true
     },
+    comment: [{
+        type: Schema.ObjectId,
+        ref: 'comment'
+    }]
 }, {
     versionKey: false
 })

@@ -24,7 +24,7 @@ export const createPublication = async (req, res) => {
 
 export const getPublications = async (req, res) => {
     try {
-        const query = [{ path: 'user', select: '-password' }, { path: 'category' }]
+        const query = [{ path: 'user', select: '-password' }, { path: 'category' }, {path: 'comment', select: '-publication', populate: {path: 'user', select:'-password'}}]
         let publication = await Publication.find({}).populate(query)
         if (!publication) return res.status(404).send({ message: 'No posts to show' })
         return res.send({ message: 'List of publications', publication })
@@ -36,7 +36,7 @@ export const getPublications = async (req, res) => {
 
 export const searchPublication = async (req, res) => {
     try {
-        const query = [{ path: 'user', select: '-password' }, { path: 'category' }]
+        const query = [{ path: 'user', select: '-password' }, { path: 'category' }, {path: 'comment', select: '-publication', populate: {path: 'user', select:'-password'}}]
         let { id } = req.params
         let publication = await Publication.findOne({ _id: id }).populate(query)
         if (!publication) return res.status(404).send({ message: 'Publication not found' })
@@ -52,7 +52,7 @@ export const updatePublication = async (req, res) => {
         let { id } = req.params
         let { _id } = req.user
         let data = req.body
-        const query = [{ path: 'user', select: '-password' }, { path: 'category' }]
+        const query = [{ path: 'user', select: '-password' }, { path: 'category' }, {path: 'comment', select: '-publication', populate: {path: 'user', select:'-password'}}]
         let publication = await Publication.findOne({ _id: id })
         if (!publication) return res.status(404).send({ message: 'Publication no found' })
         if (publication.user.toString() === _id.toString()) {
@@ -72,7 +72,7 @@ export const deletePublication = async (req, res) => {
     try {
         let { id } = req.params
         let { _id } = req.user
-        const query = [{ path: 'user', select: '-password' }, { path: 'category' }]
+        const query = [{ path: 'user', select: '-password' }, { path: 'category' }, {path: 'comment', select: '-publication', populate: {path: 'user', select:'-password'}}]
         let publication = await Publication.findOne({ _id: id })
         if (!publication) return res.status(404).send({ message: 'Publication not found' })
         if (publication.user.toString() === _id.toString()) {
@@ -92,7 +92,7 @@ export const deletePublication = async (req, res) => {
 export const personalPublications = async (req, res) => {
     try {
         let { _id } = req.user
-        const query = [{ path: 'user', select: '-password' }, { path: 'category' }]
+        const query = [{ path: 'user', select: '-password' }, { path: 'category' }, {path: 'comment', select: '-publication', populate: {path: 'user', select:'-password'}}]
         let publication = await Publication.find({ user: _id }).populate(query)
         if (!publication) return res.status(404).send({ message: 'Publications not found' })
         return res.send({ message: 'Your publications found', publication })

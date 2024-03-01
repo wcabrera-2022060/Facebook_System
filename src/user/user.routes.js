@@ -10,7 +10,7 @@ api.post('/createUser', createUser)
 api.post('/login', login)
 api.get('/getUsers', [validateJwt], getUsers)
 api.post('/searchUser/:id', [validateJwt], searchUser)
-api.put('/updateUser', [validateJwt], updateUser)
+api.put('/updateUser/:id', [validateJwt], updateUser)
 api.put('/updatePassword', [validateJwt], updatePassword)
 
 export default api
